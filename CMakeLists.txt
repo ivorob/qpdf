@@ -9,6 +9,9 @@ ADD_SUBDIRECTORY (tests)
 SET (SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 SET (INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 SET (SOURCES
-        ${SRC_DIR}/example.cpp)
+        ${SRC_DIR}/example.cpp
+        ${SRC_DIR}/string.cpp
+    )
 
 ADD_EXECUTABLE (qpdf_example ${SOURCES})
+TARGET_INCLUDE_DIRECTORIES (qpdf_example PRIVATE ${INCLUDE_DIR})
